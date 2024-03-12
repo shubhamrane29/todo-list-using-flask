@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="container">
+    <form action="/update/{{todo.sno}}" method="POST">
+        <div class="form-group">
+            <h2 style="padding-top: 20px;">Update ToDo</h2>
+          <label for="title" style="padding-top: 20px;">To Do List</label>
+          <input type="text" class="form-control" name='title' id="title" value="{{todo.title}}" aria-describedby="emailHelp" placeholder="Enter Todo">
+        </div>
+        <div class="form-group">
+          <label for="Description">Todo Description</label>
+          <input type="text" class="form-control" name = 'Description' id="Description" value="{{todo.Description}}" placeholder="Description">
+        </div>
+        <button type="submit" class="btn btn-outline-dark">Update</button>
+      </form>
+    </div>
+    
+{% endblock body %}
+
